@@ -2,13 +2,13 @@ package oops_concept;
 
 
 
-class Animal{
+class Parent{
 	public void sound() {
 		System.out.println("animal sound");
 	}
 }
 
-class Dog extends Animal{
+class Child extends Parent{
 	public void sound() {
 		System.out.println("Dog sound");
 	}
@@ -17,9 +17,9 @@ class Dog extends Animal{
 
 public class Overriding_test {
 	public static void main(String args[]) {
-		Animal ob = new Animal();
+	    Parent ob = new Parent();
 		ob.sound();
-		Animal a  = new Dog();    // parent reference  child object
+		Child a  = new Child();    // parent reference  child object
 		a.sound();
 	}
 	
