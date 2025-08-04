@@ -13,7 +13,8 @@ public class Frequency_words {
 		for(String word :words) {
 			map.put(word,map.getOrDefault(word, 0)+1);
 		}
-		 map.forEach((key ,value) ->   System.out.println(key +" " +value));
+//		 map.forEach((key ,value) ->   System.out.println(key +" " +value));
+		System.out.print(map.entrySet());
 	}
 
 }
