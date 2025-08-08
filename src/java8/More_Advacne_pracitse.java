@@ -1,10 +1,11 @@
 package java8;
 import java.util.*;
 import java.util.function.*;
+import java.util.stream.Collectors;
 class Person{
 	int age;
 	String name;
-	Person(int age ,String name){
+	Person(String name,int age ){
 		this.age =age;
 		this.name = name;
 	}
@@ -22,7 +23,11 @@ public class More_Advacne_pracitse {
 			    new Person("Reena", 27)
 			);
 		
-		people.forEach(System.out::println);
+		List<String> filtered = people.stream().filter(x->x.name.startsWith("R"))
+				.filter(x->x.age >=25).map(x-> {
+					return x.name +" is " +x.age+" years old ";
+				}).collect(Collectors.toList());
+		filtered.forEach(System.out::println);
 
 	}
 	
